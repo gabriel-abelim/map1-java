@@ -30,10 +30,10 @@ public class Program {
 
 				if (votes.containsKey(name)) {
 					int votesSoFar = votes.get(name);
-					votes.put(name, count + votesSoFar);
+					votes.put(name, count + votesSoFar);     // Se tiver lido, nas linhas anteiriores, esta Key (cadidato), o seu valor é acumulado
 				}
 				else {
-					votes.put(name, count);
+					votes.put(name, count);         // Se esta Key (candidato) ainda não tiver sido lida, simplesmente o adiciona no map (sem precisar acumalr valor)
 				}
 				
 				line = br.readLine();
